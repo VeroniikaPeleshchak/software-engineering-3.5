@@ -1,0 +1,104 @@
+(: 1. Короткий список усіх багів: софт, назва, ПІБ автора/виконавця, priority великими літерами :)
+
+for $b in /bug_tracking_system/software/bug
+let $software-name  := $b/../name
+let $creator-name   := concat($b/created_by/first_name, " ", $b/created_by/last_name)
+let $assignee-name  := concat($b/assigned_to/first_name, " ", $b/assigned_to/last_name)
+return
+  <bug-summary id="{ $b/@id }">
+    <software>{ $software-name/text() }</software>
+    <title>{ $b/name/text() }</title>
+    <priority>{ upper-case($b/priority/text()) }</priority>
+    <creator>{ $creator-name }</creator>
+    <assignee>{ $assignee-name }</assignee>
+  </bug-summary>
+
+
+(: 2. Скільки багів кожного пріоритету, і скільки з них ще в статусі New :)
+
+for $b in /bug_tracking_system/software/bug
+let $p := $b/priority/text()
+group by $p
+order by $p
+return
+  <priority-stats name="{ $p }">
+    <bugs-count>{ count($b) }</bugs-count>
+    <new-count>{ count($b[status = "New"]) }</new-count>
+  </priority-stats>
+
+
+(: 3. Перевірити: чи всі High/Critical баги вже НЕ в статусі New? :)
+
+let $dangerous-bugs :=
+    /bug_tracking_system/software/bug
+    [priority = "High" or priority = "Critical"]
+return
+  <all-dangerous-not-new>
+  {
+    if (every $b in $dangerous-bugs satisfies ($b/status = ("Fixed", "In Progress")))
+    then "Так, всі High/Critical баги вже не в статусі New."
+    else "Ні, є ще High/Critical баги в статусі New."
+  }
+  </all-dangerous-not-new>
+
+
+(: 4. Для кожного багу по пріоритету рахуємо “severity-score” від 1 до 4 :)
+
+for $b in /bug_tracking_system/software/bug
+let $priority := string($b/priority)
+let $severity :=
+  switch ($priority)
+    case "Critical" return 4
+    case "High"     return 3
+    case "Medium"   return 2
+    default         return 1
+return
+  <bug-risk id="{ $b/@id }">
+    <software>{ $b/../name/text() }</software>
+    <bug-name>{ $b/name/text() }</bug-name>
+    <priority>{ $priority }</priority>
+    <severity-score>{ $severity }</severity-score>
+  </bug-risk>
+
+
+(: 5. Для всіх багів, де є history_corrections, знаходимо дату останньої корекції :)
+
+for $b in /bug_tracking_system/software/bug[history_corrections/correction]
+let $parsed-dates :=
+  for $c in $b/history_corrections/correction
+  return
+    try {
+      xs:date(string($c/@date))
+    } catch * {
+      ()          (: якщо дата кривенька – ігноруємо :)
+    }
+let $last-date := max($parsed-dates)
+order by $last-date descending
+return
+  <bug-last-correction id="{ $b/@id }">
+    <software>{ $b/../name/text() }</software>
+    <bug-name>{ $b/name/text() }</bug-name>
+    <last-correction-date>{ $last-date }</last-correction-date>
+  </bug-last-correction>
+
+
+(: 6. Описуємо, кому призначено баг – розробнику, тестеру чи менеджеру :)
+
+for $b in /bug_tracking_system/software/bug
+let $role-element := $b/assigned_to/role
+return
+  <bug-assignment id="{ $b/@id }">
+    <software>{ $b/../name/text() }</software>
+    <bug-name>{ $b/name/text() }</bug-name>
+    {
+      typeswitch ($role-element)
+        case element(role) return
+          let $r := normalize-space(string($role-element))
+          return
+            if ($r = "Developer") then "Баг призначено розробнику."
+            else if ($r = "Tester") then "Баг призначено тестувальнику."
+            else if ($r = "Manager") then "Баг призначено менеджеру."
+            else concat("Баг призначено ролі: ", $r)
+        default return "Інформація про роль відсутня."
+    }
+  </bug-assignment>

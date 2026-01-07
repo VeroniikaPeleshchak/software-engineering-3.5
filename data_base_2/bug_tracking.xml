@@ -1,0 +1,436 @@
+<bug_tracking_system>
+  <software id="1">
+    <name>TaskMaster</name>
+    <version>1.0.0</version>
+    <category>Utility</category>
+    <bug id="29" date="2025-09-22">
+      <name>Новий баг з високим пріоритетом</name>
+      <priority>High</priority>
+      <status>New</status>
+      <module>UI</module>
+      <description>Перевірка фантомного читання</description>
+      <created_by>
+        <first_name>Ivan</first_name>
+        <last_name>Sokolov</last_name>
+        <email>ivansokolov88@gmail.com</email>
+        <role>Developer</role>
+      </created_by>
+      <assigned_to>
+        <first_name>Maria</first_name>
+        <last_name>Kozak</last_name>
+        <email>mariakozak@gmail.com</email>
+        <role>Manager</role>
+      </assigned_to>
+      <history_corrections />
+    </bug>
+    <bug id="30" date="2025-09-22">
+      <name>Bug from T1</name>
+      <priority>Medium</priority>
+      <status>New</status>
+      <module>Core</module>
+      <description>T1 insert</description>
+      <created_by>
+        <first_name>Ivan</first_name>
+        <last_name>Sokolov</last_name>
+        <email>ivansokolov88@gmail.com</email>
+        <role>Developer</role>
+      </created_by>
+      <assigned_to>
+        <first_name>Maria</first_name>
+        <last_name>Kozak</last_name>
+        <email>mariakozak@gmail.com</email>
+        <role>Manager</role>
+      </assigned_to>
+      <history_corrections />
+    </bug>
+    <bug id="31" date="2025-09-22">
+      <name>Bug from T1</name>
+      <priority>Medium</priority>
+      <status>New</status>
+      <module>Core</module>
+      <description>T1 insert</description>
+      <created_by>
+        <first_name>Ivan</first_name>
+        <last_name>Sokolov</last_name>
+        <email>ivansokolov88@gmail.com</email>
+        <role>Developer</role>
+      </created_by>
+      <assigned_to>
+        <first_name>Maria</first_name>
+        <last_name>Kozak</last_name>
+        <email>mariakozak@gmail.com</email>
+        <role>Manager</role>
+      </assigned_to>
+      <history_corrections />
+    </bug>
+    <bug id="35" date="2025-09-23">
+      <name>Новий баг з високим пріоритетом</name>
+      <priority>High</priority>
+      <status>New</status>
+      <module>UI</module>
+      <description>Перевірка фантомного читання</description>
+      <created_by>
+        <first_name>Ivan</first_name>
+        <last_name>Sokolov</last_name>
+        <email>ivansokolov88@gmail.com</email>
+        <role>Developer</role>
+      </created_by>
+      <assigned_to>
+        <first_name>Maria</first_name>
+        <last_name>Kozak</last_name>
+        <email>mariakozak@gmail.com</email>
+        <role>Manager</role>
+      </assigned_to>
+      <history_corrections />
+    </bug>
+    <bug id="10" date="2025-03-18">
+      <name>Новий баг</name>
+      <priority>Low</priority>
+      <status>New</status>
+      <module>UI</module>
+      <description>Перевірка оновлення.</description>
+      <created_by>
+        <first_name>Ivan</first_name>
+        <last_name>Sokolov</last_name>
+        <email>ivansokolov88@gmail.com</email>
+        <role>Developer</role>
+      </created_by>
+      <assigned_to>
+        <first_name>Maria</first_name>
+        <last_name>Kozak</last_name>
+        <email>mariakozak@gmail.com</email>
+        <role>Manager</role>
+      </assigned_to>
+      <history_corrections />
+    </bug>
+    <bug id="11" date="2025-09-21">
+      <name>Некоректне відображення таблиці</name>
+      <priority>High</priority>
+      <status>New</status>
+      <module>Reports</module>
+      <description>При великій кількості записів таблиця не відображається повністю.</description>
+      <created_by>
+        <first_name>Ivan</first_name>
+        <last_name>Sokolov</last_name>
+        <email>ivansokolov88@gmail.com</email>
+        <role>Developer</role>
+      </created_by>
+      <assigned_to>
+        <first_name>Maria</first_name>
+        <last_name>Kozak</last_name>
+        <email>mariakozak@gmail.com</email>
+        <role>Manager</role>
+      </assigned_to>
+      <history_corrections />
+    </bug>
+    <bug id="3" date="2024-11-02">
+      <name>Несправність інтерфейсу</name>
+      <priority>Low</priority>
+      <status>In Progress</status>
+      <module>UI</module>
+      <description>Інтерфейс не реагує на кліки кнопок.</description>
+      <created_by>
+        <first_name>Olena</first_name>
+        <last_name>Bilous</last_name>
+        <email>olenabilous@gmail.com</email>
+        <role>Developer</role>
+      </created_by>
+      <assigned_to>
+        <first_name>Noah</first_name>
+        <last_name>Davis</last_name>
+        <email>noahdavis@gmail.com</email>
+        <role>Developer</role>
+      </assigned_to>
+      <history_corrections>
+        <correction id="5" date="2025-03-01">
+          <comment>Шрифт було адаптовано для різних розмірів екранів.</comment>
+          <corrected_by>
+            <first_name>Maria</first_name>
+            <last_name>Kozak</last_name>
+            <email>mariakozak@gmail.com</email>
+          </corrected_by>
+        </correction>
+      </history_corrections>
+    </bug>
+  </software>
+  <software id="2">
+    <name>EpicQuest</name>
+    <version>2.1.3</version>
+    <category>Game</category>
+    <bug id="4" date="2025-01-26">
+      <name>Помилка в системі аутентифікації</name>
+      <priority>Critical</priority>
+      <status>New</status>
+      <module>Authentication</module>
+      <description>Невірно працює логін через Google.</description>
+      <created_by>
+        <first_name>Ivan</first_name>
+        <last_name>Sokolov</last_name>
+        <email>ivansokolov88@gmail.com</email>
+        <role>Developer</role>
+      </created_by>
+      <assigned_to>
+        <first_name>Dmytro</first_name>
+        <last_name>Melnyk</last_name>
+        <email>dmytromelnuk2000@gmail.com</email>
+        <role>Tester</role>
+      </assigned_to>
+      <history_corrections>
+        <correction id="4" date="2025-02-09">
+          <comment>Додано можливість скидання пароля при аутентифікації через Google.</comment>
+          <corrected_by>
+            <first_name>Ivan</first_name>
+            <last_name>Sokolov</last_name>
+            <email>ivansokolov88@gmail.com</email>
+          </corrected_by>
+        </correction>
+      </history_corrections>
+    </bug>
+  </software>
+  <software id="3">
+    <name>FocusFlow</name>
+    <version>3.0.5</version>
+    <category>Productivity</category>
+    <bug id="2" date="2025-03-01">
+      <name>Помилка при запуску програми</name>
+      <priority>Critical</priority>
+      <status>Fixed</status>
+      <module>Core</module>
+      <description>Програма завершується аварійно під час запуску.</description>
+      <created_by>
+        <first_name>Maria</first_name>
+        <last_name>Kozak</last_name>
+        <email>mariakozak@gmail.com</email>
+        <role>Manager</role>
+      </created_by>
+      <assigned_to>
+        <first_name>Olena</first_name>
+        <last_name>Bilous</last_name>
+        <email>olenabilous@gmail.com</email>
+        <role>Developer</role>
+      </assigned_to>
+      <history_corrections>
+        <correction id="10" date="2025-09-21">
+          <comment>Баг виправлено: додано обробку винятків при запуску.</comment>
+          <corrected_by>
+            <first_name>Ivan</first_name>
+            <last_name>Sokolov</last_name>
+            <email>ivansokolov88@gmail.com</email>
+          </corrected_by>
+        </correction>
+        <correction id="2" date="2024-11-15">
+          <comment>Змінено дизайн кнопок на головній сторінці.</comment>
+          <corrected_by>
+            <first_name>Ivan</first_name>
+            <last_name>Sokolov</last_name>
+            <email>ivansokolov88@gmail.com</email>
+          </corrected_by>
+        </correction>
+      </history_corrections>
+    </bug>
+  </software>
+  <software id="4">
+    <name>ChatLink</name>
+    <version>4.0.2</version>
+    <category>Communication</category>
+    <bug id="5" date="2024-08-27">
+      <name>Система не зберігає налаштування</name>
+      <priority>Medium</priority>
+      <status>Fixed</status>
+      <module>Settings</module>
+      <description>Після перезапуску програми налаштування не зберігаються.</description>
+      <created_by>
+        <first_name>Olena</first_name>
+        <last_name>Bilous</last_name>
+        <email>olenabilous@gmail.com</email>
+        <role>Developer</role>
+      </created_by>
+      <assigned_to>
+        <first_name>Dmytro</first_name>
+        <last_name>Melnyk</last_name>
+        <email>dmytromelnuk2000@gmail.com</email>
+        <role>Tester</role>
+      </assigned_to>
+      <history_corrections>
+        <correction id="1" date="2024-10-02">
+          <comment>Додано збереження налаштувань після перезапуску програми</comment>
+          <corrected_by>
+            <first_name>Dmytro</first_name>
+            <last_name>Melnyk</last_name>
+            <email>dmytromelnuk2000@gmail.com</email>
+          </corrected_by>
+        </correction>
+      </history_corrections>
+    </bug>
+  </software>
+  <software id="5">
+    <name>SocialSphere</name>
+    <version>5.0.0</version>
+    <category>Social Media</category>
+    <bug id="1" date="2025-02-21">
+      <name>Нерівний розмір шрифта</name>
+      <priority>Low</priority>
+      <status>New</status>
+      <module>UI</module>
+      <description>Шрифт не масштабується належним чином на мобільних пристроях.</description>
+      <created_by>
+        <first_name>Maria</first_name>
+        <last_name>Kozak</last_name>
+        <email>mariakozak@gmail.com</email>
+        <role>Manager</role>
+      </created_by>
+      <assigned_to>
+        <first_name>Anna</first_name>
+        <last_name>Petrovna</last_name>
+        <email>annapetrovna123@gmail.com</email>
+        <role>Tester</role>
+      </assigned_to>
+      <history_corrections>
+        <correction id="3" date="2025-03-03">
+          <comment>Система аутентифікації була вдосконалена для кращої безпеки.</comment>
+          <corrected_by>
+            <first_name>Olena</first_name>
+            <last_name>Bilous</last_name>
+            <email>olenabilous@gmail.com</email>
+          </corrected_by>
+        </correction>
+      </history_corrections>
+    </bug>
+  </software>
+  <software id="6">
+    <name>PixelCraft</name>
+    <version>4.7.2</version>
+    <category>Graphic Design</category>
+    <bug id="8" date="2025-04-12">
+      <name>Помилка збереження</name>
+      <priority>High</priority>
+      <status>In Progress</status>
+      <module>Export</module>
+      <description>Після збереження проєкт не відкривається, файл пошкоджено.</description>
+      <created_by>
+        <first_name>Liam</first_name>
+        <last_name>Johnson</last_name>
+        <email>liam.j@gmail.com</email>
+        <role>Developer</role>
+      </created_by>
+      <assigned_to>
+        <first_name>Liam</first_name>
+        <last_name>Johnson</last_name>
+        <email>liam.j@gmail.com</email>
+        <role>Developer</role>
+      </assigned_to>
+      <history_corrections>
+        <correction id="7" date="2025-04-15">
+          <comment>Зміни на сервері дозволяють зберігати файли без пошкоджень, додано перевірку цілісності.</comment>
+          <corrected_by>
+            <first_name>Liam</first_name>
+            <last_name>Johnson</last_name>
+            <email>liam.j@gmail.com</email>
+          </corrected_by>
+        </correction>
+      </history_corrections>
+    </bug>
+  </software>
+  <software id="7">
+    <name>Quantum Query</name>
+    <version>1.0.5</version>
+    <category>Database Management</category>
+    <bug id="7" date="2025-01-13">
+      <name>Некоректний пошук</name>
+      <priority>Medium</priority>
+      <status>Fixed</status>
+      <module>Search</module>
+      <description>Пошук за ключовим словом не повертає результатів.</description>
+      <created_by>
+        <first_name>Maria</first_name>
+        <last_name>Kozak</last_name>
+        <email>mariakozak@gmail.com</email>
+        <role>Manager</role>
+      </created_by>
+      <assigned_to>
+        <first_name>Noah</first_name>
+        <last_name>Davis</last_name>
+        <email>noahdavis@gmail.com</email>
+        <role>Developer</role>
+      </assigned_to>
+      <history_corrections>
+        <correction id="9" date="2025-01-22">
+          <comment>Виправлено помилку пошуку, тепер результати повертаються коректно.</comment>
+          <corrected_by>
+            <first_name>Emma</first_name>
+            <last_name>Stone</last_name>
+            <email>emma.stone@gmail.com</email>
+          </corrected_by>
+        </correction>
+      </history_corrections>
+    </bug>
+  </software>
+  <software id="8">
+    <name>Echo Wave</name>
+    <version>3.2.0</version>
+    <category>Audio Editing</category>
+    <bug id="6" date="2025-03-14">
+      <name>Обрізаний експорт аудіо</name>
+      <priority>High</priority>
+      <status>In Progress</status>
+      <module>Export</module>
+      <description>Під час експорту аудіо фінальна частина треку обрізається.</description>
+      <created_by>
+        <first_name>Olivia</first_name>
+        <last_name>Brown</last_name>
+        <email>olivia.brown@gmail.com</email>
+        <role>Manager</role>
+      </created_by>
+      <assigned_to>
+        <first_name>Ivan</first_name>
+        <last_name>Sokolov</last_name>
+        <email>ivansokolov88@gmail.com</email>
+        <role>Developer</role>
+      </assigned_to>
+      <history_corrections>
+        <correction id="6" date="2025-03-19">
+          <comment>Додано перевірку коректності збереження даних перед експортом.</comment>
+          <corrected_by>
+            <first_name>Ivan</first_name>
+            <last_name>Sokolov</last_name>
+            <email>ivansokolov88@gmail.com</email>
+          </corrected_by>
+        </correction>
+      </history_corrections>
+    </bug>
+  </software>
+  <software id="9">
+    <name>DeepCanvas</name>
+    <version>2.1.0</version>
+    <category>Digital Art</category>
+    <bug id="9" date="2025-04-11">
+      <name>Проблема з пензлем</name>
+      <priority>Medium</priority>
+      <status>New</status>
+      <module>UI</module>
+      <description>Пензель не реагує на зміну розміру під час малювання.</description>
+      <created_by>
+        <first_name>Dmytro</first_name>
+        <last_name>Melnyk</last_name>
+        <email>dmytromelnuk2000@gmail.com</email>
+        <role>Tester</role>
+      </created_by>
+      <assigned_to>
+        <first_name>Dmytro</first_name>
+        <last_name>Melnyk</last_name>
+        <email>dmytromelnuk2000@gmail.com</email>
+        <role>Tester</role>
+      </assigned_to>
+      <history_corrections>
+        <correction id="8" date="2025-04-12">
+          <comment>Покращено обробку пензля для зміни розміру, тепер пензель адаптується до розмірів екрану.</comment>
+          <corrected_by>
+            <first_name>Dmytro</first_name>
+            <last_name>Melnyk</last_name>
+            <email>dmytromelnuk2000@gmail.com</email>
+          </corrected_by>
+        </correction>
+      </history_corrections>
+    </bug>
+  </software>
+</bug_tracking_system>

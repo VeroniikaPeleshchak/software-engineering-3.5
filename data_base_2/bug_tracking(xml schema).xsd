@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+  <!-- Обмеження для priority -->
+  <xs:simpleType name="PriorityType">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Low"/>
+      <xs:enumeration value="Medium"/>
+      <xs:enumeration value="High"/>
+      <xs:enumeration value="Critical"/>
+    </xs:restriction>
+  </xs:simpleType>
+
+  <!-- Обмеження для status -->
+<xs:simpleType name="StatusType">
+  <xs:restriction base="xs:string">
+    <xs:enumeration value="New"/>
+    <xs:enumeration value="In Progress"/>
+    <xs:enumeration value="Fixed"/>
+  </xs:restriction>
+</xs:simpleType>
+
+
+<!-- Обмеження для role -->
+<xs:simpleType name="RoleType">
+  <xs:restriction base="xs:string">
+    <xs:enumeration value="Tester"/>
+    <xs:enumeration value="Manager"/>
+    <xs:enumeration value="Developer"/>
+  </xs:restriction>
+</xs:simpleType>
+
+
+  <!-- Обмеження для email -->
+  <xs:simpleType name="EmailType">
+    <xs:restriction base="xs:string">
+      <xs:pattern value="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}"/>
+    </xs:restriction>
+  </xs:simpleType>
+
+  <!-- Тип користувача -->
+  <xs:complexType name="UserType">
+    <xs:sequence>
+      <xs:element name="first_name" type="xs:string"/>
+      <xs:element name="last_name" type="xs:string"/>
+      <xs:element name="email" type="EmailType"/>
+      <xs:element name="role" type="RoleType"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="CorrectedByType">
+  <xs:sequence>
+    <xs:element name="first_name" type="xs:string"/>
+    <xs:element name="last_name" type="xs:string"/>
+    <xs:element name="email" type="EmailType"/>
+  </xs:sequence>
+</xs:complexType>
+
+
+  <!-- Тип для correction -->
+  <xs:complexType name="CorrectionType">
+    <xs:sequence>
+      <xs:element name="comment" type="xs:string"/>
+      <xs:element name="corrected_by" type="CorrectedByType"/>
+    </xs:sequence>
+    <xs:attribute name="id" type="xs:integer" use="required"/>
+    <xs:attribute name="date" type="xs:date" use="required"/>
+  </xs:complexType>
+
+  <!-- Історія змін -->
+  <xs:complexType name="HistoryCorrectionsType">
+    <xs:sequence>
+      <xs:element name="correction" type="CorrectionType" minOccurs="0" maxOccurs="unbounded"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <!-- Тип для bug -->
+  <xs:complexType name="BugType">
+    <xs:sequence>
+      <xs:element name="name" type="xs:string"/>
+      <xs:element name="priority" type="PriorityType"/>
+      <xs:element name="status" type="StatusType"/>
+      <xs:element name="module" type="xs:string"/>
+      <xs:element name="description" type="xs:string"/>
+      <xs:element name="created_by" type="UserType"/>
+      <xs:element name="assigned_to" type="UserType"/>
+      <xs:element name="history_corrections" type="HistoryCorrectionsType"/>
+    </xs:sequence>
+    <xs:attribute name="id" type="xs:integer" use="required"/>
+    <xs:attribute name="date" type="xs:date" use="required"/>
+  </xs:complexType>
+
+  <!-- Тип для програмного забезпечення -->
+  <xs:complexType name="SoftwareType">
+    <xs:sequence>
+      <xs:element name="name" type="xs:string"/>
+      <xs:element name="version" type="xs:string"/>
+      <xs:element name="category" type="xs:string"/>
+      <xs:element name="bug" type="BugType" minOccurs="0" maxOccurs="unbounded"/>
+    </xs:sequence>
+    <xs:attribute name="id" type="xs:integer" use="required"/>
+  </xs:complexType>
+
+  <!-- Кореневий елемент -->
+  <xs:element name="bug_tracking_system">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="software" type="SoftwareType" minOccurs="0" maxOccurs="unbounded"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+
+</xs:schema>

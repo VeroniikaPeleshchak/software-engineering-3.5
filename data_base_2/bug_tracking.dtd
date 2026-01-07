@@ -1,0 +1,41 @@
+<!ELEMENT bug_tracking_system (software+)>
+
+<!ELEMENT software (name, version, category, bug+)>
+<!ATTLIST software
+    id CDATA #REQUIRED>
+
+<!ELEMENT name (#PCDATA)>
+<!ELEMENT version (#PCDATA)>
+<!ELEMENT category (#PCDATA)>
+
+<!ELEMENT bug (name, priority, status, module, description, created_by, assigned_to, history_corrections)>
+<!ATTLIST bug
+    id CDATA #REQUIRED
+    date CDATA #REQUIRED>
+
+<!ELEMENT priority (#PCDATA)>
+<!ELEMENT status (#PCDATA)>
+<!ELEMENT module (#PCDATA)>
+<!ELEMENT description (#PCDATA)>
+
+<!ELEMENT created_by (first_name, last_name, email, role)>
+<!ELEMENT assigned_to (first_name, last_name, email, role)>
+<!ELEMENT corrected_by (first_name, last_name, email)>
+
+<!ELEMENT first_name (#PCDATA)>
+<!ELEMENT last_name (#PCDATA)>
+<!ELEMENT email (#PCDATA)>
+<!ELEMENT role (#PCDATA)>
+
+<!ELEMENT history_corrections (correction*)>
+
+<!ELEMENT correction (comment, corrected_by)>
+<!ATTLIST correction
+    id CDATA #REQUIRED
+    date CDATA #REQUIRED>
+
+<!ELEMENT comment (#PCDATA)>
+
+
+
+

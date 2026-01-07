@@ -1,0 +1,312 @@
+<html lang="uk">
+
+<head>
+    <meta charset="UTF-8">
+    <style>
+        table {
+            border-collapse: collapse;
+            width: 100%;
+            font-family: Arial, sans-serif;
+        }
+
+        th,
+        td {
+            border: 1px solid #ccc;
+            padding: 8px;
+            text-align: left;
+        }
+
+        th {
+            background-color: #f0f0f0;
+            font-weight: bold;
+        }
+
+        tr.critical {
+            background-color: #ff9999;
+        }
+
+        tr.high {
+            background-color: #ffcccb;
+        }
+
+        tr.medium {
+            background-color: #fff5cc;
+        }
+
+        tr.low {
+            background-color: #ccffcc;
+        }
+
+        tr {
+            font-weight: normal;
+        }
+
+        ul {
+            font-family: "Courier New", monospace;
+            margin-top: 20px;
+        }
+
+        li {
+            margin-bottom: 8px;
+        }
+    </style>
+</head>
+
+<body>
+    <h2>Bug Report Table</h2>
+    <table>
+        <tr>
+            <th>#</th>
+            <th>Software</th>
+            <th>Bug Name</th>
+            <th>Priority</th>
+            <th>Status</th>
+            <th>Module</th>
+            <th>Date</th>
+            <th>Created By</th>
+            <th>Assigned To</th>
+        </tr>
+        <tr class="low">
+            <td>1</td>
+            <td>TaskMaster</td>
+            <td>Несправність інтерфейсу</td>
+            <td>Low</td>
+            <td>In Progress</td>
+            <td>UI</td>
+            <td>2024-11-02</td>
+            <td>Olena Bilous</td>
+            <td>Noah Davis</td>
+        </tr>
+        <tr class="low">
+            <td>1</td>
+            <td>TaskMaster</td>
+            <td>Новий баг</td>
+            <td>Low</td>
+            <td>New</td>
+            <td>UI</td>
+            <td>2025-03-18</td>
+            <td>Ivan Sokolov</td>
+            <td>Maria Kozak</td>
+        </tr>
+        <tr class="high">
+            <td>1</td>
+            <td>TaskMaster</td>
+            <td>Некоректне відображення таблиці</td>
+            <td>High</td>
+            <td>New</td>
+            <td>Reports</td>
+            <td>2025-09-21</td>
+            <td>Ivan Sokolov</td>
+            <td>Maria Kozak</td>
+        </tr>
+        <tr class="high">
+            <td>1</td>
+            <td>TaskMaster</td>
+            <td>Новий баг з високим пріоритетом</td>
+            <td>High</td>
+            <td>New</td>
+            <td>UI</td>
+            <td>2025-09-22</td>
+            <td>Ivan Sokolov</td>
+            <td>Maria Kozak</td>
+        </tr>
+        <tr class="medium">
+            <td>1</td>
+            <td>TaskMaster</td>
+            <td>Bug from T1</td>
+            <td>Medium</td>
+            <td>New</td>
+            <td>Core</td>
+            <td>2025-09-22</td>
+            <td>Ivan Sokolov</td>
+            <td>Maria Kozak</td>
+        </tr>
+        <tr class="medium">
+            <td>1</td>
+            <td>TaskMaster</td>
+            <td>Bug from T1</td>
+            <td>Medium</td>
+            <td>New</td>
+            <td>Core</td>
+            <td>2025-09-22</td>
+            <td>Ivan Sokolov</td>
+            <td>Maria Kozak</td>
+        </tr>
+        <tr class="high">
+            <td>1</td>
+            <td>TaskMaster</td>
+            <td>Новий баг з високим пріоритетом</td>
+            <td>High</td>
+            <td>New</td>
+            <td>UI</td>
+            <td>2025-09-23</td>
+            <td>Ivan Sokolov</td>
+            <td>Maria Kozak</td>
+        </tr>
+        <tr class="critical">
+            <td>2</td>
+            <td>EpicQuest</td>
+            <td>Помилка в системі аутентифікації</td>
+            <td>Critical</td>
+            <td>New</td>
+            <td>Authentication</td>
+            <td>2025-01-26</td>
+            <td>Ivan Sokolov</td>
+            <td>Dmytro Melnyk</td>
+        </tr>
+        <tr class="critical">
+            <td>3</td>
+            <td>FocusFlow</td>
+            <td>Помилка при запуску програми</td>
+            <td>Critical</td>
+            <td>Fixed</td>
+            <td>Core</td>
+            <td>2025-03-01</td>
+            <td>Maria Kozak</td>
+            <td>Olena Bilous</td>
+        </tr>
+        <tr class="medium">
+            <td>4</td>
+            <td>ChatLink</td>
+            <td>Система не зберігає налаштування</td>
+            <td>Medium</td>
+            <td>Fixed</td>
+            <td>Settings</td>
+            <td>2024-08-27</td>
+            <td>Olena Bilous</td>
+            <td>Dmytro Melnyk</td>
+        </tr>
+        <tr class="low">
+            <td>5</td>
+            <td>SocialSphere</td>
+            <td>Нерівний розмір шрифта</td>
+            <td>Low</td>
+            <td>New</td>
+            <td>UI</td>
+            <td>2025-02-21</td>
+            <td>Maria Kozak</td>
+            <td>Anna Petrovna</td>
+        </tr>
+        <tr class="high">
+            <td>6</td>
+            <td>PixelCraft</td>
+            <td>Помилка збереження</td>
+            <td>High</td>
+            <td>In Progress</td>
+            <td>Export</td>
+            <td>2025-04-12</td>
+            <td>Liam Johnson</td>
+            <td>Liam Johnson</td>
+        </tr>
+        <tr class="medium">
+            <td>7</td>
+            <td>Quantum Query</td>
+            <td>Некоректний пошук</td>
+            <td>Medium</td>
+            <td>Fixed</td>
+            <td>Search</td>
+            <td>2025-01-13</td>
+            <td>Maria Kozak</td>
+            <td>Noah Davis</td>
+        </tr>
+        <tr class="high">
+            <td>8</td>
+            <td>Echo Wave</td>
+            <td>Обрізаний експорт аудіо</td>
+            <td>High</td>
+            <td>In Progress</td>
+            <td>Export</td>
+            <td>2025-03-14</td>
+            <td>Olivia Brown</td>
+            <td>Ivan Sokolov</td>
+        </tr>
+        <tr class="medium">
+            <td>9</td>
+            <td>DeepCanvas</td>
+            <td>Проблема з пензлем</td>
+            <td>Medium</td>
+            <td>New</td>
+            <td>UI</td>
+            <td>2025-04-11</td>
+            <td>Dmytro Melnyk</td>
+            <td>Dmytro Melnyk</td>
+        </tr>
+    </table>
+    <h2>Corrections List</h2>
+    <ul>
+        <li>
+            <strong>Дата:</strong>2025-09-21<br />
+            <strong>Коментар:</strong>Баг виправлено: додано обробку винятків при запуску.<br />
+            <strong>Виправив:</strong>Ivan Sokolov<em> (ivansokolov88@gmail.com)</em>
+            <br />
+            <strong>Software:</strong>FocusFlow
+        </li>
+        <li>
+            <strong>Дата:</strong>2025-04-15<br />
+            <strong>Коментар:</strong>Зміни на сервері дозволяють зберігати файли без пошкоджень, додано перевірку
+            цілісності.<br />
+            <strong>Виправив:</strong>Liam Johnson<em> (liam.j@gmail.com)</em>
+            <br />
+            <strong>Software:</strong>PixelCraft
+        </li>
+        <li>
+            <strong>Дата:</strong>2025-04-12<br />
+            <strong>Коментар:</strong>Покращено обробку пензля для зміни розміру, тепер пензель адаптується до розмірів
+            екрану.<br />
+            <strong>Виправив:</strong>Dmytro Melnyk<em> (dmytromelnuk2000@gmail.com)</em>
+            <br />
+            <strong>Software:</strong>DeepCanvas
+        </li>
+        <li>
+            <strong>Дата:</strong>2025-03-19<br />
+            <strong>Коментар:</strong>Додано перевірку коректності збереження даних перед експортом.<br />
+            <strong>Виправив:</strong>Ivan Sokolov<em> (ivansokolov88@gmail.com)</em>
+            <br />
+            <strong>Software:</strong>Echo Wave
+        </li>
+        <li>
+            <strong>Дата:</strong>2025-03-03<br />
+            <strong>Коментар:</strong>Система аутентифікації була вдосконалена для кращої безпеки.<br />
+            <strong>Виправив:</strong>Olena Bilous<em> (olenabilous@gmail.com)</em>
+            <br />
+            <strong>Software:</strong>SocialSphere
+        </li>
+        <li>
+            <strong>Дата:</strong>2025-03-01<br />
+            <strong>Коментар:</strong>Шрифт було адаптовано для різних розмірів екранів.<br />
+            <strong>Виправив:</strong>Maria Kozak<em> (mariakozak@gmail.com)</em>
+            <br />
+            <strong>Software:</strong>TaskMaster
+        </li>
+        <li>
+            <strong>Дата:</strong>2025-02-09<br />
+            <strong>Коментар:</strong>Додано можливість скидання пароля при аутентифікації через Google.<br />
+            <strong>Виправив:</strong>Ivan Sokolov<em> (ivansokolov88@gmail.com)</em>
+            <br />
+            <strong>Software:</strong>EpicQuest
+        </li>
+        <li>
+            <strong>Дата:</strong>2025-01-22<br />
+            <strong>Коментар:</strong>Виправлено помилку пошуку, тепер результати повертаються коректно.<br />
+            <strong>Виправив:</strong>Emma Stone<em> (emma.stone@gmail.com)</em>
+            <br />
+            <strong>Software:</strong>Quantum Query
+        </li>
+        <li>
+            <strong>Дата:</strong>2024-11-15<br />
+            <strong>Коментар:</strong>Змінено дизайн кнопок на головній сторінці.<br />
+            <strong>Виправив:</strong>Ivan Sokolov<em> (ivansokolov88@gmail.com)</em>
+            <br />
+            <strong>Software:</strong>FocusFlow
+        </li>
+        <li>
+            <strong>Дата:</strong>2024-10-02<br />
+            <strong>Коментар:</strong>Додано збереження налаштувань після перезапуску програми<br />
+            <strong>Виправив:</strong>Dmytro Melnyk<em> (dmytromelnuk2000@gmail.com)</em>
+            <br />
+            <strong>Software:</strong>ChatLink
+        </li>
+    </ul>
+</body>
+
+</html>
