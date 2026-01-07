@@ -1,0 +1,4 @@
+/Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake -DCMAKE_BUILD_TYPE=Debug -DCMAKE_MAKE_PROGRAM=/opt/homebrew/bin/ninja -DCMAKE_C_COMPILER=/opt/homebrew/bin/mpicc -DCMAKE_CXX_COMPILER=/opt/homebrew/bin/mpicxx -G Ninja -S /Users/veronikapelesak/Desktop/practice/parallel_comp/lab9-10 -B /Users/veronikapelesak/Desktop/practice/parallel_comp/lab9-10/cmake-build-debug
+-- Configuring done (0.1s)
+-- Generating done (0.0s)
+-- Build files have been written to: /Users/veronikapelesak/Desktop/practice/parallel_comp/lab9-10/cmake-build-debug

@@ -1,0 +1,5 @@
+/Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake -DCMAKE_BUILD_TYPE=Debug -DCMAKE_MAKE_PROGRAM=/Applications/CLion.app/Contents/bin/ninja/mac/ninja -DCMAKE_C_COMPILER=/opt/homebrew/bin/gcc-15 -DCMAKE_CXX_COMPILER=/opt/homebrew/bin/g++-15 -G Ninja -S /Users/veronikapelesak/Desktop/practice/parallel_comp/lab8 -B /Users/veronikapelesak/Desktop/practice/parallel_comp/lab8/cmake-build-debug
+-- Found OpenCL: /Library/Developer/CommandLineTools/SDKs/MacOSX15.5.sdk/System/Library/Frameworks/OpenCL.framework
+-- Configuring done (0.1s)
+-- Generating done (0.0s)
+-- Build files have been written to: /Users/veronikapelesak/Desktop/practice/parallel_comp/lab8/cmake-build-debug

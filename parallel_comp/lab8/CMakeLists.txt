@@ -1,0 +1,26 @@
+cmake_minimum_required(VERSION 3.16)
+project(lab8 CXX)
+
+set(CMAKE_CXX_STANDARD 17)
+set(CMAKE_CXX_STANDARD_REQUIRED ON)
+
+if(NOT CMAKE_BUILD_TYPE)
+    set(CMAKE_BUILD_TYPE Release)
+endif()
+
+find_package(OpenCL)
+if(OpenCL_FOUND)
+    message(STATUS "Found OpenCL: ${OpenCL_LIBRARY}")
+    add_executable(lab8 jacobi_opencl.cpp)
+    target_include_directories(lab8 PRIVATE ${OpenCL_INCLUDE_DIRS})
+    target_link_libraries(lab8 PRIVATE ${OpenCL_LIBRARIES})
+else()
+    message(WARNING "FindOpenCL failed; falling back to macOS framework")
+    add_executable(lab8 jacobi_opencl.cpp)
+    if(APPLE)
+        target_link_libraries(matmul PRIVATE "-framework OpenCL")
+    else()
+        message(FATAL_ERROR "OpenCL not found and not on macOS.")
+    endif()
+endif()
+
